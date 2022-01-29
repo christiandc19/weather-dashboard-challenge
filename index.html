@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Weather Dashboard</title>
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Weather Dashboard</a>
+        </div>
+    </nav>
+
+<div class="container row" id="container">
+    <div class="cities col-4">
+        <input id="enter-city" class="m-2" placeholder="Search of a City">
+        <button class="d-block m-2" id="fetch-button">Search</button>
+        <div class="repo-list">
+            <ul id="ulEl">
+
+            </ul>
+        </div>
+    </div>
+
+        <div class="col-8">
+            <div class="cityTemp">
+                <h1 id="city">CITY</h1>
+                <p id="temp"></p>   
+                <p id="wind"></p>   
+                <p id="humidity"></p>           
+        
+        
+             </div>
+        
+            <div class="forecast">
+                <h1>FORECAST</h1>
+            </div>
+        </div>
+</div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
