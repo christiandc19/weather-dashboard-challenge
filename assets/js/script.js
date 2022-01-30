@@ -1,12 +1,38 @@
 // TODO: Edit the URL to get only 5 issues of Twitter's Chill repo
 var city = document.getElementById("enter-city").value;
-var requestUrl = 'http://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=12aee5ec80ede57ba0b91712e6a6f44d';
-var fetchBtn = document.getElementById("fetch-button");
+var requestUrl = 'http://api.openweathermap.org/data/2.5/forecast?q=' + city + '&appid=12aee5ec80ede57ba0b91712e6a6f44d';
 
-var displayCity = document.querySelector("h1");
+//api.openweathermap.org/data/2.5/forecast?q= + city + &appid=12aee5ec80ede57ba0b91712e6a6f44d;
+
+// 'http://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=12aee5ec80ede57ba0b91712e6a6f44d';
+
+
+var fetchBtn = document.getElementById("fetch-button");
+var dayOne = moment().format("MM/DD/YYYY")
+var dayTwo = moment().add(1, 'days').format("MM/DD/YYYY")
+var dayThree = moment().add(2, 'days').format("MM/DD/YYYY")
+var dayFour = moment().add(3, 'days').format("MM/DD/YYYY")
+var dayFive = moment().add(4, 'days').format("MM/DD/YYYY")
+var daySix = moment().add(5, 'days').format("MM/DD/YYYY")
+
+
+
+// console.log(dayOne);
+console.log(dayTwo);
+
+
+
+var displayCity = document.getElementById("city");
 var displayTemp = document.getElementById("temp");
 var displayWind = document.getElementById("wind");
-var displayHumidity = document.getElementById("humidity");
+var displayHumidity = document.getElementById("humid");
+var displayDayOneDate = document.getElementById("dayOneDate");
+var displayDayTwoDate = document.getElementById("dayTwoDate");
+var displayDayThreeDate = document.getElementById("dayThreeDate");
+var displayDayFourDate = document.getElementById("dayFourDate");
+var displayDayFiveDate = document.getElementById("dayFiveDate");
+var displayDaySixDate = document.getElementById("daySixDate");
+var displayIcon = document.getElementById("icon");
 
 fetch(requestUrl)
   .then(function (response) {
@@ -14,28 +40,41 @@ fetch(requestUrl)
   })
 
 
-  .then(function (data) {      
+  .then(function (data) {     
+    
+    console.log(data);
+    console.log(data.list[0].dt_txt); // DATE
+    console.log(data.list[0].main.humidity);
+    console.log(data.list[0].weather[0].icon);
 
-      function getData() {
-      displayCity.innerHTML = city;
-      displayTemp.innerHTML = ("Temp: " + data.main.temp);
-      displayWind.innerHTML = ("Wind: " + data.wind.speed);
-      displayHumidity.innerHTML = ("Humidty: " + data.main.humidity);
 
-}
 
-fetchBtn.addEventListener("click", getData);
 
-getData();
+
+  fetchBtn.onclick  = function() {
+  displayCity.innerHTML = city;
+
+  displayHumidity.innerHTML = ("Humidty: " + data.list[0].main.humidity);
+  displayTemp.innerHTML = ("Temp: " + data.list[0].main.temp);
+  displayWind.innerHTML = ("Wind: " + data.list[0].wind.speed);
+
+  displayDayOneDate.innerHTML = dayOne;
+  displayDayTwoDate.innerHTML = dayTwo;
+  displayDayThreeDate.innerHTML = dayThree;
+  displayDayFourDate.innerHTML = dayFour;
+  displayDayFiveDate.innerHTML = dayFive;
+  displayDaySixDate.innerHTML = daySix;
+
+
+    }
 });  
     
     
     
-       // console.log(data);
       // console.log(data.name);
       //console.log(data.wind);      
    
-    
+     
     
     
     
