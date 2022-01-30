@@ -17,6 +17,7 @@ var daySix = moment().add(5, 'days').format("MM/DD/YYYY")
 
 
 
+
 // console.log(dayOne);
 console.log(dayTwo);
 
@@ -32,7 +33,8 @@ var displayDayThreeDate = document.getElementById("dayThreeDate");
 var displayDayFourDate = document.getElementById("dayFourDate");
 var displayDayFiveDate = document.getElementById("dayFiveDate");
 var displayDaySixDate = document.getElementById("daySixDate");
-var displayIcon = document.getElementById("icon");
+
+
 
 fetch(requestUrl)
   .then(function (response) {
@@ -43,10 +45,13 @@ fetch(requestUrl)
   .then(function (data) {     
     
     console.log(data);
-    console.log(data.list[0].dt_txt); // DATE
-    console.log(data.list[0].main.humidity);
-    console.log(data.list[0].weather[0].icon);
+    // console.log(data.list[0].dt_txt); // DATE
+    // console.log(data.list[0].main.humidity);
+    // console.log(data.list[0].weather[0].icon);
 
+    $("austin").on("click", function() {
+      console.log(data)
+    })
 
 
 
@@ -64,11 +69,14 @@ fetch(requestUrl)
   displayDayFourDate.innerHTML = dayFour;
   displayDayFiveDate.innerHTML = dayFive;
   displayDaySixDate.innerHTML = daySix;
-
+  $("#icon").html("<img src='http://openweathermap.org/img/w/" + data.list[0].weather[0].icon + ".png' alt='Icon depicting current weather.'>");
 
     }
 });  
     
+
+
+
     
     
       // console.log(data.name);
