@@ -1,9 +1,6 @@
 // TODO: Edit the URL to get only 5 issues of Twitter's Chill repo
 // var city = document.getElementById("enter-city").value;
 
-var city = $('#enter-city').val(); 
-
-var requestUrl = 'http://api.openweathermap.org/data/2.5/forecast?q=' + city + '&appid=12aee5ec80ede57ba0b91712e6a6f44d';
 
 var fetchBtn = document.getElementById("fetch-button");
 var dayOne = moment().format("MM/DD/YYYY")
@@ -43,9 +40,25 @@ var humid5 = document.getElementById("humid5");
 var humid6 = document.getElementById("humid6");
 
 
-// $('#fetch-button').on('click', function() {
-//   console.log(data);
-// });    
+$('#fetch-button').on('click', function() {
+  
+  var city = $('#enter-city').val(); 
+
+  var requestUrl = 'http://api.openweathermap.org/data/2.5/forecast?q=' + city + '&units=imperial&appid=12aee5ec80ede57ba0b91712e6a6f44d';
+  
+  searchWeather(requestUrl);
+});
+
+$('.fav').on('click', function() {
+  var city = $(this).text();
+  var requestUrl = 'http://api.openweathermap.org/data/2.5/forecast?q=' + city + '&units=imperial&appid=12aee5ec80ede57ba0b91712e6a6f44d';
+  searchWeather(requestUrl);
+
+});
+
+
+function searchWeather(requestUrl) {
+  
 
 
 fetch(requestUrl)
@@ -56,8 +69,7 @@ fetch(requestUrl)
   console.log(data);
 
 
-  // SEARCH CITY FUNCTION  
-  fetchBtn.onclick  = function() {
+ 
 
   displayCity.innerHTML = (data.city.name);
 
@@ -104,11 +116,11 @@ fetch(requestUrl)
   wind6.innerHTML= ("Wind: " + data.list[34].wind.speed);
   humid6.innerHTML= ("Humidity: " + data.list[34].main.humidity);
 
-    }
+    
 
 });  
     
-
+}
 
 
 
