@@ -22,5 +22,6 @@ Developers are often tasked with retrieving data from another application's API 
 ## Deployment
 
 https://christiandc19.github.io/weather-dashboard-challenge/
+
 https://github.com/christiandc19/weather-dashboard-challenge/
 
