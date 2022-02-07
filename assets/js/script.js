@@ -76,7 +76,7 @@ fetch(requestUrl)
   localStorage.setItem("temp1", data.list[0].main.temp + "°F"); //set to local storage
   localStorage.setItem("wind1", data.list[0].wind.speed); //set to local storage
   localStorage.setItem("date1", dayOne); //set to local storage
-  localStorage.setItem("icon1", "<img src='http://openweathermap.org/img/w/" + data.list[0].weather[0].icon + ".png>") //set to local storage
+  localStorage.setItem("icon1", "<img src='http://openweathermap.org/img/w/" + data.list[0].weather[0].icon + ".png'>") //set to local storage
 
   console.log(data.city.name)  
 
@@ -91,8 +91,6 @@ fetch(requestUrl)
   localStorage.setItem("wind2", data.list[2].wind.speed); //set to local storage
   localStorage.setItem("date2", dayTwo); //set to local storage
   localStorage.setItem("icon2", "<img src='http://openweathermap.org/img/w/" + data.list[2].weather[0].icon + ".png'>") //set to local storage
-
-
 
 
   displayDayThreeDate.innerHTML = dayThree;
@@ -130,7 +128,6 @@ fetch(requestUrl)
   wind5.innerHTML= ("Wind: " + data.list[26].wind.speed);
   humid5.innerHTML= ("Humidity: " + data.list[26].main.humidity);
 
-
   localStorage.setItem("humid5", data.list[26].main.humidity); //set to local storage
   localStorage.setItem("temp5", data.list[26].main.temp+ "°F"); //set to local storage
   localStorage.setItem("wind5", data.list[26].wind.speed); //set to local storage
@@ -152,9 +149,7 @@ fetch(requestUrl)
   localStorage.setItem("icon6", "<img src='http://openweathermap.org/img/w/" + data.list[34].weather[0].icon + ".png'>") //set to local storage
 
 });  
-    
 }
-
 
 function getVal() {
 
@@ -192,7 +187,6 @@ function getVal() {
 
   var displayDay2 = localStorage.getItem("date2");
   displayDayTwoDate.innerHTML = displayDay2;
-
 
 //DAY 3
 var displayHumid3 = localStorage.getItem("humid3");
