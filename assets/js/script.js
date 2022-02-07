@@ -53,7 +53,6 @@ $('.fav').on('click', function() {
   var city = $(this).text();
   var requestUrl = 'http://api.openweathermap.org/data/2.5/forecast?q=' + city + '&units=imperial&appid=12aee5ec80ede57ba0b91712e6a6f44d';
   searchWeather(requestUrl);
-
 });
 
 
@@ -97,8 +96,6 @@ fetch(requestUrl)
   localStorage.setItem("icon2", "<img src='http://openweathermap.org/img/w/" + data.list[2].weather[0].icon + ".png'>") //set to local storage
 
 
-
-
   displayDayThreeDate.innerHTML = dayThree;
   $("#icon3").html("<img src='http://openweathermap.org/img/w/" + data.list[10].weather[0].icon + ".png' alt='Icon depicting current weather.'>");
   temp3.innerHTML= ("Temp: " + data.list[10].main.temp + "°F");
@@ -110,9 +107,6 @@ fetch(requestUrl)
   localStorage.setItem("wind3", data.list[10].wind.speed); //set to local storage
   localStorage.setItem("date3", dayThree); //set to local storage
   localStorage.setItem("icon3", "<img src='http://openweathermap.org/img/w/" + data.list[10].weather[0].icon + ".png'>") //set to local storage
-
-
-
 
   displayDayFourDate.innerHTML = dayFour;
   $("#icon4").html("<img src='http://openweathermap.org/img/w/" + data.list[18].weather[0].icon + ".png' alt='Icon depicting current weather.'>");
@@ -126,22 +120,17 @@ fetch(requestUrl)
   localStorage.setItem("date4", dayFour); //set to local storage
   localStorage.setItem("icon4", "<img src='http://openweathermap.org/img/w/" + data.list[18].weather[0].icon + ".png'>") //set to local storage
 
-
-
   displayDayFiveDate.innerHTML = dayFive;
   $("#icon5").html("<img src='http://openweathermap.org/img/w/" + data.list[26].weather[0].icon + ".png' alt='Icon depicting current weather.'>");
   temp5.innerHTML= ("Temp: " + data.list[26].main.temp + "°F");
   wind5.innerHTML= ("Wind: " + data.list[26].wind.speed);
   humid5.innerHTML= ("Humidity: " + data.list[26].main.humidity);
 
-
   localStorage.setItem("humid5", data.list[26].main.humidity); //set to local storage
   localStorage.setItem("temp5", data.list[26].main.temp+ "°F"); //set to local storage
   localStorage.setItem("wind5", data.list[26].wind.speed); //set to local storage
   localStorage.setItem("date5", dayFive); //set to local storage
   localStorage.setItem("icon5", "<img src='http://openweathermap.org/img/w/" + data.list[26].weather[0].icon + ".png'>") //set to local storage
-
-
   
   displayDaySixDate.innerHTML = daySix;
   $("#icon6").html("<img src='http://openweathermap.org/img/w/" + data.list[34].weather[0].icon + ".png' alt='Icon depicting current weather.'>");
@@ -156,10 +145,7 @@ fetch(requestUrl)
   localStorage.setItem("icon6", "<img src='http://openweathermap.org/img/w/" + data.list[34].weather[0].icon + ".png'>") //set to local storage
 
 });  
-    
 }
-
-
 
 function getVal() {
 
@@ -182,7 +168,6 @@ function getVal() {
   var displayDay1 = localStorage.getItem("date1");
   displayDayOneDate.innerHTML = displayDay1;
 
-
 //DAY 2
   var displayHumid2 = localStorage.getItem("humid2");
   humid2.innerHTML = "Humidty: " + displayHumid2;
@@ -198,7 +183,6 @@ function getVal() {
 
   var displayDay2 = localStorage.getItem("date2");
   displayDayTwoDate.innerHTML = displayDay2;
-
 
 //DAY 3
 var displayHumid3 = localStorage.getItem("humid3");
@@ -267,102 +251,3 @@ displayDaySixDate.innerHTML = displayDay6;
 
 getVal();
 
-
-
-
-// function saveFunc(index) {
-//   $(fetch-button).click(function() {
-
-//     var display = $(".description-" + index).val(); //get the value of the textarea
-
-//     if(index === 1){
-//     console.log(task);        
-//     localStorage.setItem("task1", task)
-
-//     } else if (index === 2) {
-//       console.log(task);
-//       localStorage.setItem("task2", task)        
-//     }  else if (index === 3) {
-//       localStorage.setItem("task3", task)
-//     }  else if (index === 4) {
-//       localStorage.setItem("task4", task)
-//     }  else if (index === 5) {
-//       localStorage.setItem("task5", task)
-//     }  else if (index === 6) {
-//       localStorage.setItem("task6", task)
-//     }  else if (index === 7) {
-//       localStorage.setItem("task7", task)
-//     }  else if (index === 8) {
-//       localStorage.setItem("task8", task)
-//     }  else if (index === 9) {
-//       localStorage.setItem("task9", task)
-//     } 
-
-//   });
-// }
-// saveFunc(i);
-
-
-
-    // console.log(dayOne);
-// console.log(dayTwo);
-      // console.log(data.name);
-      //console.log(data.wind);      
-   
-         // console.log(data.list[0].dt_txt); // DATE
-    // console.log(data.list[0].main.humidity);
-    // console.log(data.list[0].weather[0].icon);
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    // TODO: Loop through the response
-
-
-    
-    // TODO: Console log each issue's URL and each user's login
-
-
-
-
-
-
-// var repoList = document.querySelector('ul');
-// var fetchButton = document.getElementById('fetch-button');
-
-// // `getApi` function is called when the `fetchButton` is clicked
-// function getApi() {
-//     let url = `api.openweathermap.org/data/2.5/weather?q={city}&appid=12aee5ec80ede57ba0b91712e6a6f44d`;
-
-//   fetch(url)
-//     .then(function(response) {
-//       return response.json.parse();
-//     })
-//     .then(function(data) {
-//       // Looping over the fetch response and inserting the URL of your repos into a list
-//       for (var i = 0; i < data.length; i++) {
-//         // Create a list element
-//         var listItem = document.createElement('li');
-
-//         // Set the text of the list element to the JSON response's .html_url property
-//         listItem.textContent = data[i].html_url;
-
-//         // Append the li element to the id associated with the ul element.
-//         repoList.appendChild(listItem);
-//       }
-//     });
-// }
-
-// fetchButton.addEventListener('click', getApi);
