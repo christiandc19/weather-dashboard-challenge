@@ -80,7 +80,7 @@ fetch(requestUrl)
   localStorage.setItem("temp1", data.list[0].main.temp + "°F"); //set to local storage
   localStorage.setItem("wind1", data.list[0].wind.speed); //set to local storage
   localStorage.setItem("date1", dayOne); //set to local storage
-  localStorage.setItem("icon1", "<img src='http://openweathermap.org/img/w/" + data.list[0].weather[0].icon + ".png>") //set to local storage
+  localStorage.setItem("icon1", "<img src='http://openweathermap.org/img/w/" + data.list[0].weather[0].icon + ".png'>") //set to local storage
 
   console.log(data.city.name)  
 
@@ -94,7 +94,7 @@ fetch(requestUrl)
   localStorage.setItem("temp2", data.list[2].main.temp+"°F"); //set to local storage
   localStorage.setItem("wind2", data.list[2].wind.speed); //set to local storage
   localStorage.setItem("date2", dayTwo); //set to local storage
-  localStorage.setItem("icon2", "<img src='http://openweathermap.org/img/w/" + data.list[2].weather[0].icon + ".png>") //set to local storage
+  localStorage.setItem("icon2", "<img src='http://openweathermap.org/img/w/" + data.list[2].weather[0].icon + ".png'>") //set to local storage
 
 
 
@@ -109,7 +109,7 @@ fetch(requestUrl)
   localStorage.setItem("temp3", data.list[10].main.temp); //set to local storage
   localStorage.setItem("wind3", data.list[10].wind.speed); //set to local storage
   localStorage.setItem("date3", dayThree); //set to local storage
-  localStorage.setItem("icon3", "<img src='http://openweathermap.org/img/w/" + data.list[10].weather[0].icon + ".png>") //set to local storage
+  localStorage.setItem("icon3", "<img src='http://openweathermap.org/img/w/" + data.list[10].weather[0].icon + ".png'>") //set to local storage
 
 
 
@@ -124,7 +124,7 @@ fetch(requestUrl)
   localStorage.setItem("temp4", data.list[18].main.temp); //set to local storage
   localStorage.setItem("wind4", data.list[18].wind.speed); //set to local storage
   localStorage.setItem("date4", dayFour); //set to local storage
-  localStorage.setItem("icon4", "<img src='http://openweathermap.org/img/w/" + data.list[18].weather[0].icon + ".png>") //set to local storage
+  localStorage.setItem("icon4", "<img src='http://openweathermap.org/img/w/" + data.list[18].weather[0].icon + ".png'>") //set to local storage
 
 
 
@@ -139,7 +139,7 @@ fetch(requestUrl)
   localStorage.setItem("temp5", data.list[26].main.temp+ "°F"); //set to local storage
   localStorage.setItem("wind5", data.list[26].wind.speed); //set to local storage
   localStorage.setItem("date5", dayFive); //set to local storage
-  localStorage.setItem("icon5", "<img src='http://openweathermap.org/img/w/" + data.list[26].weather[0].icon + ".png>") //set to local storage
+  localStorage.setItem("icon5", "<img src='http://openweathermap.org/img/w/" + data.list[26].weather[0].icon + ".png'>") //set to local storage
 
 
   
@@ -153,7 +153,7 @@ fetch(requestUrl)
   localStorage.setItem("temp6", data.list[34].main.temp); //set to local storage
   localStorage.setItem("wind6", data.list[34].wind.speed); //set to local storage
   localStorage.setItem("date6", daySix); //set to local storage
-  localStorage.setItem("icon6", "<img src='http://openweathermap.org/img/w/" + data.list[34].weather[0].icon + ".png>") //set to local storage
+  localStorage.setItem("icon6", "<img src='http://openweathermap.org/img/w/" + data.list[34].weather[0].icon + ".png'>") //set to local storage
 
 });  
     
