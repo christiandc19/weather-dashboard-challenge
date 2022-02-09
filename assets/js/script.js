@@ -1,6 +1,3 @@
-// TODO: Edit the URL to get only 5 issues of Twitter's Chill repo
-// var city = document.getElementById("enter-city").value;
-
 
 var fetchBtn = document.getElementById("fetch-button");
 var dayOne = moment().format("MM/DD/YYYY")
@@ -108,6 +105,9 @@ fetch(requestUrl)
   localStorage.setItem("date3", dayThree); //set to local storage
   localStorage.setItem("icon3", "<img src='https://openweathermap.org/img/w/" + data.list[10].weather[0].icon + ".png'>") //set to local storage
 
+
+
+
   displayDayFourDate.innerHTML = dayFour;
   $("#icon4").html("<img src='https://openweathermap.org/img/w/" + data.list[18].weather[0].icon + ".png' alt='Icon depicting current weather.'>");
   temp4.innerHTML= ("Temp: " + data.list[18].main.temp + "°F");
@@ -119,6 +119,8 @@ fetch(requestUrl)
   localStorage.setItem("wind4", data.list[18].wind.speed); //set to local storage
   localStorage.setItem("date4", dayFour); //set to local storage
   localStorage.setItem("icon4", "<img src='https://openweathermap.org/img/w/" + data.list[18].weather[0].icon + ".png'>") //set to local storage
+
+
 
   displayDayFiveDate.innerHTML = dayFive;
   $("#icon5").html("<img src='https://openweathermap.org/img/w/" + data.list[26].weather[0].icon + ".png' alt='Icon depicting current weather.'>");
