@@ -44,7 +44,6 @@ var uvIndex5 = document.getElementById("uvIndex5");
 var uvIndex6 = document.getElementById("uvIndex6");
 var cityInput = document.getElementById("enter-city");
 
-
 var displayUV = 0;
 
 
@@ -52,9 +51,8 @@ var searchedCity = "";
 
 
 $('#fetch-button').on('click', function() {
-  
   var city = $('#enter-city').val();
-
+ 
   var requestUrl = 'https://api.openweathermap.org/data/2.5/forecast?q=' + city + '&units=imperial&appid=12aee5ec80ede57ba0b91712e6a6f44d';
   
   searchWeather(requestUrl);
@@ -66,15 +64,7 @@ $('#fetch-button').on('click', function() {
     newBtn.addEventListener("click", getNewCity);
     let container = document.getElementById("cities");
     container.appendChild(newBtn);
-    searchedCity = city;
-
-        // History
-        function setValHistory() {
-          localStorage.setItem("inputCity", city); //set to local storage
-          }
-          setValHistory();
   }
-
 });
 
 $('.fav').on('click', function() {
@@ -350,6 +340,8 @@ function getVal() {
       uvIndex.classList.remove("uv-code-low", "uv-code-moderate", "uv-code-high");
       uvIndex.classList.add("uv-code-very-high");
     }
+
+
   }
 }
 
