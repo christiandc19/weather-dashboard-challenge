@@ -3,6 +3,7 @@
     height: 250px;
 }
 
+
 #city-container {
     width: 900px;
 }
@@ -15,3 +16,22 @@
     color: white;
 }
 
+#uvIndex {
+    width: 120px;
+}
+
+.uv-code-low {
+    text-align: center; 
+    background-color: green; }
+
+.uv-code-moderate {
+    background-color: yellow;
+}
+
+.uv-code-high {
+    background-color: orange;
+}
+
+.uv-code-very-high {
+    background-color: red;
+}
